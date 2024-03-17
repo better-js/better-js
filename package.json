@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.40"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "pages": "bash pages.sh",
+    "main": "bash main.sh"
+  }
+}

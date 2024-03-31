@@ -20,6 +20,7 @@ export const nav: Nav = [
       { text: "HTML", link: "/HTML" },
       { text: "CSS", link: "/CSS" },
       { text: "JavaScript", link: "/JavaScript" },
+      { text: "TypeScript", link: "/TypeScript" },
     ],
   },
   {
@@ -35,8 +36,8 @@ export const nav: Nav = [
     items: [
       { text: "Git", link: "/Git" },
       { text: "WebPack", link: "/WebPack" },
-      { text: "ESLint", link: "/ESLint" },
-      { text: "prettier", link: "/Prettier" },
+      // { text: "ESLint", link: "/ESLint" },
+      // { text: "prettier", link: "/Prettier" },
     ],
   },
   {

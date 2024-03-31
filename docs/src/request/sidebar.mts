@@ -1,6 +1,71 @@
 export default [
   {
+    text: "promise",
+    collapsed: true,
+    items: [
+      {
+        text: "promise介绍",
+        collapsed: true,
+        items: [
+          {
+            text: "准备",
+            link: "/request/promise/准备",
+          },
+          {
+            text: "Promise介绍",
+            link: "/request/promise/promise介绍",
+          },
+          {
+            text: "Promise的状态",
+            link: "/request/promise/promise的状态",
+          },
+          {
+            text: "Promise的值",
+            link: "/request/promise/promise的值",
+          },
+          {
+            text: "Promise的基本流程",
+            link: "/request/promise/promise的基本流程",
+          },
+          {
+            text: "为什么要用Promise",
+            link: "/request/promise/为什么要用promise",
+          }
+        ]
+      },
+      {
+        text: "Promise API",
+        collapsed: true,
+        items: [
+          {
+            text: "构造函数",
+            link: "/request/promise/构造函数",
+          },
+          {
+            text: "静态方法",
+            link: "/request/promise/静态方法",
+          },
+          {
+            text: "实例方法",
+            link: "/request/promise/实例方法",
+          },
+        ],
+      },
+      {
+        text: "关键问题",
+        collapsed: true,
+        link:"/request/promise/关键问题"
+      },
+      {
+        text: "自定义封装",
+        collapsed: true,
+        items: []
+      }
+    ],
+  },
+  {
     text: "ajax",
+    collapsed: true,
     items: [
       {
         text: "Ajax简介",
@@ -42,16 +107,8 @@ export default [
     ],
   },
   {
-    text: "promise",
-    items: [
-      {
-        text: "promise",
-        link: "/request/promise/promise",
-      },
-    ],
-  },
-  {
     text: "axios",
+    collapsed: true,
     items: [
       {
         text: "axios",

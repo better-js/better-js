@@ -5,7 +5,7 @@
 
 import { Sidebar } from "./type/Sidebar.mts";
 // 计算机基础
-
+import Network from "../../src/Network/sidebar.mts"
 // 基本功
 import HTML from "../../src/HTML/sidebar.mjs";
 import CSS from "../../src/CSS/sidebar.mjs";
@@ -25,6 +25,7 @@ import Nginx from "../../src/Nginx/sidebar.mjs";
 import cli from "../../src/cli/sidebar.mjs";
 import request from "../../src/request/sidebar.mts";
 export const sidebar: Sidebar = {
+  "/Network": Network,
   "/HTML": HTML,
   "/CSS": CSS,
   "/JavaScript": JavaScript,

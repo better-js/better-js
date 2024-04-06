@@ -1,20 +1,38 @@
 # undefined
 
-1. 未定义是比较特殊的类型，只有一个值undefined。
-2. 只声明变量，不赋值的情况下，变量的默认值就是undefined。
-3. 一般很少直接为某个变量赋值为undefined）
-4. 在控制台输出 **<font color="gray">灰色</font>**。
+Undefined类型只有一个值，就是特殊值 `undefined`。
 
-5. 未赋值与未定义的变量值都为 `undefined` ，建议声明变量设置初始值，以便区分变量状态。
+**当使用 `var` 或 `let` 声明了变量但没有初始化时，就相当于给变量赋予了 `undefined` 值。**
 
-6. 数值类型环境中 `undefined` 值会被转换为 `NaN`。
-
-```javascript
-let age   //声明变量但未赋值
-document.write(age)   //输出undefined
+```js
+let codebetter;
+console.log(codebetter == undefined); // true
 ```
 
-#### undefined开发中的使用场景：
+增加这个特殊值的目的就是为了正式明确空对象指针（null）和未初始化变量的区别。
+
+
+
+注意：
+
+1. 对未声明的变量，只能执行一个有用的操作，就是对它调用 `typeof`。在对未初始化的变量调用 `typeof` 时，返回的结果是 `undefined`，但对未声明的变量调用它时，返回的结果还是 `undefined`。
+
+   ```js
+   let message;
+   console.log(typeof message); // undefined
+   console.log(typeof age); // undefined
+   ```
+
+2. `undefined` 在数值类型环境中会被当作 `NaN` 来对待，而布尔类型环境中会被当作 `false`。
+
+   ```js
+   console.log(Number(undefined)); // NaN
+   console.log(Boolean(undefined)); // false
+   ```
+
+   
+
+## 使用场景
 
 - 定义变量未给值就是 undefined
 - 开发中经常声明一个变量，等待传送过来的数据，如果检测变量是undefined就说明没有值传递过来	

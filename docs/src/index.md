@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /our-team
+      link: /hello
     - theme: alt
       text: 代码案例
-      link: /our-team
+      link: /demo
 
 features:
   - icon: 

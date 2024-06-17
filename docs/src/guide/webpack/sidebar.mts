@@ -5,7 +5,6 @@ export default [
     items: [
       {
         text: "webpack介绍",
-        collapsed: true,
         items: [
           {
             text: "webpack定义",
@@ -19,7 +18,6 @@ export default [
       },
       {
         text: "五大核心概念",
-        collapsed: true,
         items: [
           {
             text: "entry",
@@ -64,7 +62,6 @@ export default [
     items: [
       {
         text: "html资源处理",
-        collapsed: true,
         items: [
           {
             text: "处理html资源",
@@ -78,7 +75,6 @@ export default [
       },
       {
         text: "css资源处理",
-        collapsed: true,
         items: [
           {
             text: "处理css资源",
@@ -116,7 +112,6 @@ export default [
       },
       {
         text: "js资源处理",
-        collapsed: true,
         items: [
           {
             text: "处理eslint资源",
@@ -130,7 +125,6 @@ export default [
       },
       {
         text: "处理其它资源",
-        collapsed: true,
         items: [
           {
             text: "处理图片资源",
@@ -155,7 +149,6 @@ export default [
     items: [
       {
         text: "提升开发体验",
-        collapsed: true,
         items: [
           {
             text: "SourceMap",
@@ -165,7 +158,6 @@ export default [
       },
       {
         text: "提升打包构建速度",
-        collapsed: true,
         items: [
           {
             text: "HotModuleReplacement",
@@ -191,7 +183,6 @@ export default [
       },
       {
         text: "减少代码体积",
-        collapsed: true,
         items: [
           {
             text: "Tree Shaking",
@@ -209,7 +200,6 @@ export default [
       },
       {
         text: "优化代码运行性能",
-        collapsed: true,
         items: [
           {
             text: "Code Split",
@@ -241,7 +231,6 @@ export default [
     items: [
       {
         text: "React-cli",
-        collapsed: true,
         items: [
           {
             text: "开发模式配置",
@@ -263,7 +252,6 @@ export default [
       },
       {
         text: "Vue-cli",
-        collapsed: true,
         items: [
           {
             text: "开发模式配置",
@@ -291,7 +279,6 @@ export default [
     items: [
       {
         text: "Loader原理",
-        collapsed: true,
         items: [
           {
             text: "loader概念",

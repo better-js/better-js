@@ -1,6 +1,60 @@
-# npm install
+# npm install的原理
 
-## 在执行 `npm install` 时发生了什么？
+![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0570bf4581f74a9790bb86567b889e68~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?)
+
+
+
+当执行 npm install 时，npm会查看 `package-lock.json` 文件，根据其中列出的 `version`、`resolved`、`integrity` 字段来确定需要安装的确切包版本。如果本地缓存中已经存在与 `resolved`、`integrity` 匹配的包，npm就会从缓存中提取该包，如果本地缓存中没有找到匹配的包，或者 `package-lock.json` 文件中的 `integrity` 校验和缓存中的包不匹配，npm就会从 `resolved` 指定的 URL 下载包，并将其添加到本地缓存中供未来使用。
+
+
+
+## .npmrc
+
+- 项目级.npmrc
+  - 在当前项目根目录下 `.npmrc`
+- 用户级.npmrc
+  - 本地磁盘用户文件夹下的 `.npmrc`
+- 全局的.npmrc
+  - AppData下npm文件夹下
+- npm内置的.npmrc
+  - 在Nodejs安装文件夹下的npm下 `.npmrc`
+
+```sh
+# 定义npm的registry，即npm的包下载源
+registry=http://registry.npmjs.org/
+
+# 定义npm的代理服务器，用于访问网络
+proxy=http://proxy.example.com:8080/
+
+# 定义npm的https代理服务器，用于访问网络
+https-proxy=http://proxy.example.com:8080/
+
+# 是否在SSL证书验证错误时退出
+strict-ssl=true
+
+# 定义自定义CA证书文件的路径
+cafile=/path/to/cafile.pem
+
+# 自定义请求头中的User-Agent
+user-agent=npm/{npm-version} node/{node-version} {platform}
+
+# 安装包时是否自动保存到package.json的dependencies中
+save=true
+
+# 安装包时是否自动保存到package.json的devDependencies中
+save-dev=true
+
+# 安装包时是否精确保存版本号
+save-exact=true
+
+# 是否在安装时检查依赖的node和npm版本是否符合要求
+engine-strict=true
+
+# 是否在运行脚本时自动将node的路径添加到PATH环境变量中
+scripts-prepend-node-path=true
+```
+
+
 
 `npm i` 在安装依赖时使用的算法称为“npm依赖解析算法”，以下是基本步骤：
 
@@ -12,7 +66,41 @@
 4. 在解决依赖的过程中，npm会尽可能地重用已经安装的包，以减少需要下载包的数量。这是通过一个叫做“**最大化版本满足**”的策略来实现的。
 5. 最后，npm会生成一个 `node_modules` 目录，这个目录中包含了所有下载的包，以及它们的依赖。这个目录的结构是树形的，每个包都是树的节点，依赖的包是子节点。
 
-::: details 最大化版本满足
+
+
+> 首先安装的依赖都会存放在根目录的 `node_modules`，默认采用**扁平化**的方式安装，并且排序规则.bin第一个然后@系列，再然后按照首字母排序abcd等，并且使用的算法是广度优先遍历，在遍历依赖树时，npm会首先处理项目根目录下的依赖，然后逐层处理每个依赖包的依赖，直到所有依赖都被处理完毕。在处理每个依赖时，npm会检查该依赖的版本号是否符合依赖树中其他依赖的版本要求，如果不符合，则会尝试安装适合的版本
+
+
+
+
+
+
+
+## 术语解释
+
+### 扁平化
+
+扁平化只是理想状态下：
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4bc99984ea8a4569bebd8f0630990224~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?)
+
+**安装某个二级模块时，若发现第一层级有相同名称，相同版本的模块，便直接复用那个模块**
+
+因为A模块下的C模块被安装到了第一级，这使得B模块能够复用处在同一级下；且名称，版本，均相同的C模块
+
+非理想状态下：
+
+![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9288120f63cb4736afc2455e679de499~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?)
+
+因为B和A所要求的依赖模块不同，（B下要求是v2.0的C，A下要求是v1.0的C ）所以B不能像2中那样复用A下的C v1.0模块 所以如果这种情况还是会出现模块冗余的情况，他就会给B继续搞一层node_modules，就是非扁平化了。
+
+
+
+### 广度优先：
+
+
+
+### 最大化版本满足
 
 “最大化版本满足” 是 npm 在解析和安装依赖时采用的一种策略。
 
@@ -30,9 +118,7 @@
 
 这个策略可以提高安装的速度，同时也可以减少磁盘空间的使用。但是它也可能会导致一些问题，例如版本冲突。因此，npm在实际应用中会结合其他策略，如语义版本控制，来确保依赖的正确性。
 
-:::
-
-::: details 语义版本控制
+### details 语义版本控制
 
 语义版本控制，也称为SemVer，是一种版本命名规范。
 
@@ -57,14 +143,12 @@
 | <      | 匹配小于指定版本的任何版本                                   |
 | ""     | 匹配任何版本                                                 |
 
-:::
 
-::: details node_modules下包的排序规则
+
+### node_modules下包的排序规则
 
 在 Node.js 的 node_modules 目录下，包的排序规则并不是有 Node.js 决定的，而是由你的文件系统决定的。不同的文件系统可能有不同的排序规则。
 
 在大多数情况下，文件系统通常会按照字母顺序进行排序。在ASCII编码中，特殊字符（如 `.` 和 `@` ）的编码值都比字母和数字小，因此它们通常排在前面。
-
-:::
 
 - 首先安装的依赖都会存放在根目录的 `node_modules` ，默认采用扁平化的方式安装，并且排序按照先 `.` 再 `@` ，再然后按照首字母排序，并且使用的算法是广度优先遍历，在遍历依赖树时，npm会首先处理项目根目录下的依赖，然后逐层处理每个依赖包的依赖，直到所有依赖都被处理完毕。在处理依每个赖时，npm会检查该依赖的版本号是否符合当前依赖树中其他依赖的版本要求，如果不符合，则会尝试安装适合的版本。 

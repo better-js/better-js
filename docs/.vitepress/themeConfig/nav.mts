@@ -11,6 +11,7 @@ export const nav: Nav = [
   //   text: "计算机基础",
   //   items: [
   //     { text: "计算机网络", link: "" },
+  //     { text: "计算机组成原理", link: "" },
   //     { text: "数据结构", link: "" },
   //   ],
   // },
@@ -20,9 +21,9 @@ export const nav: Nav = [
       { text: "HTML", link: "/guide/html/" },
       { text: "CSS", link: "/guide/css/" },
       { text: "JavaScript", link: "/guide/javascript/" },
+      { text: "Chrome浏览器", link: "/guide/chrome/" },
     ],
   },
-
   {
     text: "框架",
     items: [
@@ -45,21 +46,29 @@ export const nav: Nav = [
     text: "工程化",
     items: [
       { text: "Git", link: "/guide/git/" },
-      // { text: "前端脚手架", link: "" },
       {
         text: "构建工具",
-        items: [{ text: "WebPack", link: "/guide/webpack/" }],
+        items: [
+          { text: "WebPack", link: "/guide/webpack/" },
+          { text: "Rollup", link: "/guide/rollup/" },
+        ],
       },
-      // { text: "ESLint", link: "" },
-      // { text: "prettier", link: "" },
+      {
+        text: "规范化",
+        items: [
+          { text: "ESLint", link: "/guide/eslint/" },
+          { text: "prettier", link: "/guide/prettier/" },
+        ],
+      },
     ],
   },
   {
     text: "服务端",
     items: [
       { text: "Node", link: "/guide/node/" },
-      // { text: "Nginx", link: "" },
-      // { text: "Koa", link: "" },
+      { text: "Koa", link: "/guide/koa/" },
+      { text: "MySQL", link: "/guide/mysql/" },
+      { text: "Nginx", link: "/guide/nginx/" },
     ],
   },
   // {

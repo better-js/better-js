@@ -20,6 +20,6 @@
 
 3. 可以设置多个字体，按照从左到右的顺序逐个查找，找到就用，没有找到就使用后面的，且通常在最后面写上`serif` （衬线字体）或 `sans-serif` （非衬线字体）
 
-   <img src="../../public/images/image-20240211213038848.png" alt="image-20240211213038848" style="width:100%;" />
+   <img src="../../../public/images/image-20240211213038848.png" alt="image-20240211213038848" style="width:100%;" />
 
 :::

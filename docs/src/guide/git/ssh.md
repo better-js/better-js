@@ -1,8 +1,21 @@
 # SSH
 
+```sh
+cd ~/.shh
+
+ssh-keygen -t rsa -b 4096
+
+ls -ltr
+
+# 无后缀为私钥文件、.pub为公钥文件
+# 复制公钥文件内容
+```
+
+
+
 ## github 或 gitee
 
-[github 生成ssh密钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[github生成ssh密钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 [gitee生成ssh密钥](https://help.gitee.com/base/account/SSH%E5%85%AC%E9%92%A5%E8%AE%BE%E7%BD%AE)
 
@@ -70,15 +83,20 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 ### 设置账户SSH公钥
 
+头像 → settings → SSH and GPG keys → New SSH key → Add SSH key
+
 [github 添加ssh密钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 
 
 
 
-## ssh和https的区别
+## https和ssh的区别
 
-- ssh属于项目的管理者，之后提交不需要验证身份，因为只有管理者才能操作
+- https
+  - 这种方式在我们把本地代码push到远程仓库的时候，需要验证用户名和密码
 
-- https谁都可以下载，每次需要输入用户名和密码
+
+- ssh
+  - 这种方式在推送的时候不需要验证用户名和密码，但是需要在 GitHub 上添加 SSH 公钥的配置
 

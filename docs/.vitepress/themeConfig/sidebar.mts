@@ -30,6 +30,7 @@ import MySQL from "../../src/guide/mysql/sidebar.mts";
 import Nginx from "../../src/guide/nginx/sidebar.mts";
 import Interview from "../../src/guide/interview/sidebar.mts";
 import Extend from "../../src/guide/extend/sidebar.mts";
+import Project from "../../src/guide/project/sidebar.mts";
 
 export const sidebar: Sidebar = {
   "/guide/network": Network,
@@ -57,4 +58,5 @@ export const sidebar: Sidebar = {
   "/guide/nginx/": Nginx,
   "/guide/interview/": Interview,
   "/guide/extend/": Extend,
+  "/guide/project": Project,
 };

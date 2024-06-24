@@ -86,11 +86,11 @@ export const nav: Nav = [
     items: [
       {
         text: "项目搭建0-1",
-        link: "/guide/",
+        link: "/guide/project/",
       },
       {
         text: "性能优化",
-        link: "/guide/",
+        link: "/guide/project/性能优化",
       },
     ],
   },

@@ -4,28 +4,37 @@
  */
 
 import { Sidebar } from "./type/Sidebar.mts";
-import HTML from "../../src/guide/html/sidebar.mjs";
-import CSS from "../../src/guide/css/sidebar.mjs";
-import JavaScript from "../../src/guide/javascript/sidebar.mjs";
-import Chrome from "../../src/guide/chrome/sidebar.mjs";
-import Vue from "../../src/guide/vue/core/sidebar.mjs";
-import Vuex from "../../src/guide/vue/vuex/sidebar.mjs";
-import Pinia from "../../src/guide/vue/pinia/sidebar.mjs";
-import Router from "../../src/guide/vue/router/sidebar.mjs";
-import Vite from "../../src/guide/vue/vite/sidebar.mjs";
-import React from "../../src/guide/react/sidebar.mjs";
-import WeApp from "../../src/guide/weapp/sidebar.mjs";
-import Git from "../../src/guide/git/sidebar.mjs";
-import WebPack from "../../src/guide/webpack/sidebar.mjs";
-import RollUp from "../../src/guide/rollup/sidebar.mjs";
-import ESLint from "../../src/guide/eslint/sidebar.mjs";
-import Prettier from "../../src/guide/prettier/sidebar.mjs";
-import Node from "../../src/guide/node/sidebar.mjs";
-import Koa from "../../src/guide/koa/sidebar.mjs";
-import MySQL from "../../src/guide/mysql/sidebar.mjs";
-import Nginx from "../../src/guide/nginx/sidebar.mjs";
+
+import Network from "../../src/guide/network/sidebar.mts";
+import Pocc from "../../src/guide/pocc/sidebar.mts";
+import DataStructure from "../../src/guide/data-structure/sidebar.mts";
+import HTML from "../../src/guide/html/sidebar.mts";
+import CSS from "../../src/guide/css/sidebar.mts";
+import JavaScript from "../../src/guide/javascript/sidebar.mts";
+import Chrome from "../../src/guide/chrome/sidebar.mts";
+import Vue from "../../src/guide/vue/core/sidebar.mts";
+import Vuex from "../../src/guide/vue/vuex/sidebar.mts";
+import Pinia from "../../src/guide/vue/pinia/sidebar.mts";
+import Router from "../../src/guide/vue/router/sidebar.mts";
+import Vite from "../../src/guide/vue/vite/sidebar.mts";
+import React from "../../src/guide/react/sidebar.mts";
+import WeApp from "../../src/guide/weapp/sidebar.mts";
+import Git from "../../src/guide/git/sidebar.mts";
+import WebPack from "../../src/guide/webpack/sidebar.mts";
+import RollUp from "../../src/guide/rollup/sidebar.mts";
+import ESLint from "../../src/guide/eslint/sidebar.mts";
+import Prettier from "../../src/guide/prettier/sidebar.mts";
+import Node from "../../src/guide/node/sidebar.mts";
+import Koa from "../../src/guide/koa/sidebar.mts";
+import MySQL from "../../src/guide/mysql/sidebar.mts";
+import Nginx from "../../src/guide/nginx/sidebar.mts";
+import Interview from "../../src/guide/interview/sidebar.mts";
+import Extend from "../../src/guide/extend/sidebar.mts";
 
 export const sidebar: Sidebar = {
+  "/guide/network": Network,
+  "/guide/pocc": Pocc,
+  "/guide/data-structure": DataStructure,
   "/guide/html/": HTML,
   "/guide/css/": CSS,
   "/guide/javascript/": JavaScript,
@@ -46,4 +55,6 @@ export const sidebar: Sidebar = {
   "/guide/koa/": Koa,
   "/guide/mysql/": MySQL,
   "/guide/nginx/": Nginx,
+  "/guide/interview/": Interview,
+  "/guide/extend/": Extend,
 };

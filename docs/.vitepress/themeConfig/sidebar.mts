@@ -10,9 +10,13 @@ import Pocc from "../../src/guide/pocc/sidebar.mts";
 import DataStructure from "../../src/guide/data-structure/sidebar.mts";
 import HTML from "../../src/guide/html/sidebar.mts";
 import CSS from "../../src/guide/css/sidebar.mts";
-import JavaScript from "../../src/guide/javascript/sidebar.mts";
+import ECMAScript from "../../src/guide/javascript/ECMAScript/sidebar.mts";
+import BOM from "../../src/guide/javascript/BOM/sidebar.mts";
+import DOM from "../../src/guide/javascript/DOM/sidebar.mts";
+import TypeScript from "../../src/guide/javascript/typescript/sidebar.mts";
 import Chrome from "../../src/guide/chrome/sidebar.mts";
-import Vue from "../../src/guide/vue/core/sidebar.mts";
+import Vue2 from "../../src/guide/vue/vue2/sidebar.mts";
+import Vue3 from "../../src/guide/vue/core/sidebar.mts";
 import Vuex from "../../src/guide/vue/vuex/sidebar.mts";
 import Pinia from "../../src/guide/vue/pinia/sidebar.mts";
 import Router from "../../src/guide/vue/router/sidebar.mts";
@@ -38,9 +42,13 @@ export const sidebar: Sidebar = {
   "/guide/data-structure": DataStructure,
   "/guide/html/": HTML,
   "/guide/css/": CSS,
-  "/guide/javascript/": JavaScript,
+  "/guide/javascript/ECMAScript/": ECMAScript,
+  "/guide/javascript/BOM/": BOM,
+  "/guide/javascript/DOM/": DOM,
+  "/guide/javascript/TypeScript": TypeScript,
   "/guide/chrome/": Chrome,
-  "/guide/vue/core/": Vue,
+  "/guide/vue/vue2/": Vue2,
+  "/guide/vue/core/": Vue3,
   "/guide/vue/vuex/": Vuex,
   "/guide/vue/pinia/": Pinia,
   "/guide/vue/router/": Router,

@@ -20,7 +20,15 @@ export const nav: Nav = [
     items: [
       { text: "HTML", link: "/guide/html/" },
       { text: "CSS", link: "/guide/css/" },
-      { text: "JavaScript", link: "/guide/javascript/" },
+      {
+        text: "JavaScript",
+        items: [
+          { text: "ECMAScript", link: "/guide/javascript/ECMAScript/" },
+          { text: "BOM", link: "/guide/javascript/BOM/" },
+          { text: "DOM", link: "/guide/javascript/DOM/" },
+        ],
+      },
+      { text: "TypeScript", link: "/guide/javascript/TypeScript/" },
     ],
   },
   {
@@ -29,7 +37,8 @@ export const nav: Nav = [
       {
         text: "Vue生态",
         items: [
-          { text: "Vue", link: "/guide/vue/core/" },
+          { text: "Vue2", link: "/guide/vue/vue2/" },
+          { text: "Vue3", link: "/guide/vue/core/" },
           { text: "Vuex", link: "/guide/vue/vuex/" },
           { text: "Pinia", link: "/guide/vue/pinia/" },
           { text: "Router", link: "/guide/vue/router/" },

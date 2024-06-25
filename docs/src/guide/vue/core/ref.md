@@ -1,21 +1,30 @@
 # ref
 
-:::tip
+> 接受一个内部值，返回一个响应式的、可更改的 ref 对象，此对象只有一个指向其内部值的属性 `.value`
 
-**作用：**定义**基本类型**、**对象类型**的响应式数据。
+:::tip ref
 
-**语法：**`let xxx = ref(初始值)`。
+```js
+import {ref} from 'vue'
 
-**返回值：**一个 `RefImpl` 的实例对象，简称 `ref对象` 或 `ref`，`ref` 对象的 `value` **属性是响应式的**。
+// 语法: let 变量名 = ref(初始值)
+// 对于 let count = ref(0) 来说，count不是响应式的，count.value是响应式的。
+let count = ref(0)
+// JS中操作数据需要 .value，但模板中不需要 .value，直接使用即可。
+console.log(count.value) // 0
+```
 
-**注意点：**
+作用：定义**基本类型**、**对象类型**的响应式数据。
 
-- `JS`中操作数据需要：`xxx.value`，但模板中不需要 `.value`，直接使用即可。
-- 对于`let num = ref(10)`来说，`num`不是响应式的，`num.value`是响应式的。
+返回值：一个 `RefImpl` 的实例对象，简称 `ref对象` 或 `ref`，`ref` 对象的 `value` **属性是响应式的**。
 
 :::
 
-## ref 创建基本类型的响应式数据
+
+
+## 使用场景
+
+### 1 创建基本类型的响应式数据
 
 ```vue
 <template>
@@ -60,7 +69,7 @@ const increment = () => {
 
 
 
-## ref 获取DOM元素
+### 2 获取DOM元素
 
 :::tip
 
@@ -72,7 +81,7 @@ const increment = () => {
 
 :::
 
-## 用于普通DOM标签
+#### （1）用于普通DOM标签
 
 在模板中通过 **`ref = "xxx"`** 绑定DOM元素，在setup中通过 **`let xxx = ref()`** 来获取。
 
@@ -100,8 +109,15 @@ onMounted(() => console.log('onMounted', box.value))
 </script>
 ```
 
-## 用于组件标签
+#### （2）用于组件标签
 
 ```vue
+
 ```
+
+
+
+
+
+## 源码剖析
 

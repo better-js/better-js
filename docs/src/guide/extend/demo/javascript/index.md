@@ -1,1 +1,0 @@
-# javascript示例

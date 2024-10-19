@@ -4,7 +4,6 @@
  */
 
 import { SocialLink } from "./type/SocialLink.mts";
-import { algolia } from "./algolia.mts";
 
 // logo
 export const logo = {
@@ -53,11 +52,6 @@ export const lastUpdated = {
   },
 };
 
-// search
-// export const search = {
-//   provider: "algolia",
-//   options: algolia,
-// };
 export const search = {
   provider: "local",
   options: {

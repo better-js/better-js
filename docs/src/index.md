@@ -18,15 +18,15 @@ hero:
 
 features:
   - icon: 
-      src: /images/concentration.svg
+      src: /logo/concentration.svg
     title: 保持专注
     details: focus
   - icon:
-      src: /images/accumulate.svg
+      src: /logo/accumulate.svg
     title: 勤于积累
     details: accumulate
   - icon:
-      src: /images/share.svg
+      src: /logo/share.svg
     title: 乐于分享
     details: share
 

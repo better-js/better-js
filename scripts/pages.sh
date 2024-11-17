@@ -15,7 +15,7 @@ cd ./docs/.vitepress/dist
 #git初始化，每次初始化不影响推送
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'dancysu'
 git branch -M pages
 
 # 如果你想要发布到 https://<USERNAME>.github.io

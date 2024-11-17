@@ -6,7 +6,7 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "pages": "bash pages.sh",
-    "main": "bash main.sh"
+    "pages": "bash scripts/pages.sh",
+    "main": "bash scripts/main.sh"
   }
 }

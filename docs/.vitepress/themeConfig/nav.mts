@@ -6,7 +6,7 @@
 import { Nav } from "./type/Nav.mts"
 
 export const nav: Nav = [
-	{ text: "HOME", link: "/" },
+	{ text: "首页", link: "/" },
 	{
 		text: "前端",
 		items: [

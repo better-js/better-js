@@ -6,49 +6,121 @@
 import { Nav } from "./type/Nav.mts"
 
 export const nav: Nav = [
-	{ text: "首页", link: "/" },
+	{ text: "HOME", link: "/" },
 	{
-		text: "JavaScript",
+		text: "前端",
 		items: [
-			{ text: "ECMAScript", link: "/guide/network/" },
-			{ text: "BOM", link: "/guide/pocc/" },
-			{ text: "DOM", link: "/guide/data-structure/" },
+			{ text: "HTML", link: "/guide/html/" },
+			{ text: "CSS", link: "/guide/css/" },
+			{ text: "JavaScript", link: "/guide/javascript/" },
+			{ text: "TypeScript", link: "/guide/typescript/" },
 		],
 	},
-	{ text: "Node", link: "/guide/Node/" },
+	{ text: "服务端", items: [{ text: "Node", link: "/guide/node/" }] },
+
 	{
 		text: "框架",
 		items: [
-			{ text: "Vue", link: "/guide/Framework/vue" },
-			{ text: "React", link: "/guide/Framework/react" },
-			{ text: "小程序", link: "/guide/Framework/weapp" },
+			{
+				text: "web端",
+				items: [
+					{
+						text: "vue",
+						link: "/guide/vue/index",
+					},
+					{
+						text: "react",
+						link: "/guide/react/index",
+					},
+				],
+			},
+			{
+				text: "桌面端",
+				items: [
+					{
+						text: "electron",
+						link: "/guide/electron/index",
+					},
+				],
+			},
+			{
+				text: "小程序",
+				items: [
+					{
+						text: "微信小程序",
+						link: "/guide/mini-app/index",
+					},
+				],
+			},
 		],
 	},
 	{
 		text: "前端工程化",
-		items: [
-			{ text: "git", link: "/guide/Engineering/" },
-			{ text: "webpack", link: "/guide/Engineering/" },
-		],
+		items: [{ text: "git", link: "/guide/git/" }],
 	},
 	{
 		text: "性能优化",
-		items: [
-			{ text: "计算机网络", link: "/guide/Performance/" },
-			{ text: "计算机组成原理", link: "/guide/Performance/" },
-			{ text: "数据结构", link: "/guide/Performance/" },
-		],
+		items: [],
 	},
 	{
 		text: "面试宝典",
+		items: [],
+	},
+	{
+		text: "开发手记",
 		items: [
-			{ text: "js", link: "/guide/Interview/" },
-			{ text: "vue", link: "/guide/Interview/" },
-			{ text: "react", link: "/guide/Interview/" },
+			{
+				text: "monorepo",
+				link: "/guide/notes/monorepo",
+			},
 		],
 	},
 	{
-		text: "Demo",
-		items: [{ text: "计算机网络", link: "/guide/Demo/" }],
+		text: "扩展",
+		items: [
+			{
+				text: "开发环境",
+				items: [
+					{
+						text: "homebrew",
+						link: "/guide/extend/homebrew",
+					},
+					{
+						text: "nvm",
+						link: "/guide/extend/nvm",
+					},
+					{
+						text: "ohmyzsh",
+						link: "/guide/extend/ohmyzsh",
+					},
+				],
+			},
+			{
+				text: "云服务器",
+				items: [
+					{
+						text: "运维面板安装",
+						link: "/guide/extend/运维面板安装",
+					},
+					{
+						text: "域名解析",
+						link: "/guide/extend/域名解析",
+					},
+				],
+			},
+			{
+				text: "常用命令",
+				items: [
+					{
+						text: "zsh",
+						link: "/guide/extend/zsh",
+					},
+					{
+						text: "常用命令",
+						link: "/guide/extend/常用命令",
+					},
+				],
+			},
+		],
 	},
 ]

@@ -73,6 +73,18 @@ export const nav: Nav = [
 				text: "monorepo",
 				link: "/guide/notes/monorepo",
 			},
+			{
+				text: "脚手架",
+				link: "/guide/notes/",
+			},
+			{
+				text: "自定义工具函数库",
+				link: "/guide/notes/",
+			},
+			{
+				text: "UI组件库",
+				link: "/guide/notes/",
+			},
 		],
 	},
 	{

@@ -12,12 +12,15 @@ import { Sidebar } from "./type/Sidebar.mts"
 // import javaScript from '../../src/guide/javascript/sidebar.mjs'
 // node
 // vue
-import Vue from "../../src/guide/vue/sidebar.mjs"
+import Vue from "../../src/guide/vue/sidebar.mts"
 // react
-import React from "../../src/guide/react/sidebar.mjs"
+import React from "../../src/guide/react/sidebar.mts"
+// electron
+import Electron from "../../src/guide/electron/sidebar.mts"
 // 微信小程序
-import MiniApp from "../../src/guide/mini-app/sidebar.mjs"
+import MiniApp from "../../src/guide/mini-app/sidebar.mts"
 // git
+import Git from '../../src/guide/git/sidebar.mts'
 
 export const sidebar: Sidebar = {
 	// "/guide/html/": HTML,
@@ -25,5 +28,7 @@ export const sidebar: Sidebar = {
 	// "/guide/javascript/": javaScript,
 	"/guide/vue/": Vue,
 	"/guide/react/": React,
+	"/guide/electron/": Electron,
 	"/guide/mini-app/": MiniApp,
+	"/guide/git/": Git
 }

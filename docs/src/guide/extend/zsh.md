@@ -8,6 +8,8 @@ zsh，或 Z Shell，是一个 Unix-Like 系统（如 macOS 或 Linux）下的 sh
 
 
 
+> MacOS 快速打开终端方式：按下 `command` + `space(空格键)`，并在弹窗内输入 `Terminal` 即可。
+
 ## 常用命令
 
 ```shell

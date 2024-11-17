@@ -34,7 +34,7 @@ export const socialLinks: SocialLink[] = [
 // footer
 export const footer = {
   message: "",
-  copyright: "Copyright © 2020-present Dancy Sue",
+  copyright: "Copyright © 2024 Dancy Su",
 };
 
 // editLink

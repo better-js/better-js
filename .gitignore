@@ -1,1 +1,3 @@
-/docs/.vitepress/dist/
+dist
+.DS_Store
+.idea

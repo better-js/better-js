@@ -13,6 +13,10 @@ import { Sidebar } from "./type/Sidebar.mts"
 // node
 // vue
 import Vue from "../../src/guide/vue/sidebar.mts"
+import VuePrinciple from "../../src/guide/vue-principle/sidebar.mts"
+import Vuex from "../../src/guide/vuex/sidebar.mjs"
+import Pinia from "../../src/guide/pinia/sidebar.mjs"
+import VueRouter from "../../src/guide/vue-router/sidebar.mts"
 // react
 import React from "../../src/guide/react/sidebar.mts"
 // electron
@@ -27,6 +31,10 @@ export const sidebar: Sidebar = {
 	// "/guide/css/": CSS,
 	// "/guide/javascript/": javaScript,
 	"/guide/vue/": Vue,
+	"/guide/vue-principle/": VuePrinciple,
+	"/guide/pinia/": Pinia,
+	"/guide/vuex/": Vuex,
+	"/guide/vue-router/": VueRouter,
 	"/guide/react/": React,
 	"/guide/electron/": Electron,
 	"/guide/mini-app/": MiniApp,

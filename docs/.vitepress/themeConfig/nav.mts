@@ -28,6 +28,19 @@ export const nav: Nav = [
 						text: "vue",
 						link: "/guide/vue/index",
 					},
+
+					{
+						text: "vuex",
+						link: "/guide/vuex/index",
+					},
+					{
+						text: "pinia",
+						link: "/guide/pinia/index",
+					},
+					{
+						text: "vue-router",
+						link: "/guide/vue-router/index",
+					},
 					{
 						text: "react",
 						link: "/guide/react/index",
@@ -58,14 +71,14 @@ export const nav: Nav = [
 		text: "前端工程化",
 		items: [{ text: "git", link: "/guide/git/" }],
 	},
-	{
-		text: "性能优化",
-		items: [],
-	},
-	{
-		text: "面试宝典",
-		items: [],
-	},
+	// {
+	// 	text: "性能优化",
+	// 	items: [],
+	// },
+	// {
+	// 	text: "面试宝典",
+	// 	items: [],
+	// },
 	{
 		text: "开发手记",
 		items: [
@@ -88,6 +101,15 @@ export const nav: Nav = [
 		],
 	},
 	{
+		text: "源码剖析",
+		items: [
+			{
+				text: "vue3",
+				link: "/guide/vue-principle/index",
+			},
+		],
+	},
+	{
 		text: "扩展",
 		items: [
 			{
@@ -104,6 +126,10 @@ export const nav: Nav = [
 					{
 						text: "ohmyzsh",
 						link: "/guide/extend/ohmyzsh",
+					},
+					{
+						text: "nginx",
+						link: "/guide/extend/nginx",
 					},
 				],
 			},

@@ -5,9 +5,9 @@
 
 import { Sidebar } from "./type/Sidebar.mts"
 // html
-// import HTML from '../../src/guide/html/sidebar.mjs'
+import HTML from '../../src/guide/html/sidebar.mts'
 // css
-// import CSS from '../../src/guide/css/sidebar.mjs'
+import CSS from '../../src/guide/css/sidebar.mjs'
 // javascript
 // import javaScript from '../../src/guide/javascript/sidebar.mjs'
 // node
@@ -27,8 +27,8 @@ import MiniApp from "../../src/guide/mini-app/sidebar.mts"
 import Git from '../../src/guide/git/sidebar.mts'
 
 export const sidebar: Sidebar = {
-	// "/guide/html/": HTML,
-	// "/guide/css/": CSS,
+	"/guide/html/": HTML,
+	"/guide/css/": CSS,
 	// "/guide/javascript/": javaScript,
 	"/guide/vue/": Vue,
 	"/guide/vue-principle/": VuePrinciple,

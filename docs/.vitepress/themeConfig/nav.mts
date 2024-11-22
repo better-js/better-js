@@ -116,7 +116,7 @@ export const nav: Nav = [
 				text: "开发环境",
 				items: [
 					{
-						text: "homebrew",
+						text: "brew",
 						link: "/guide/extend/homebrew",
 					},
 					{
@@ -137,7 +137,7 @@ export const nav: Nav = [
 				text: "云服务器",
 				items: [
 					{
-						text: "运维面板安装",
+						text: "面板安装",
 						link: "/guide/extend/运维面板安装",
 					},
 					{

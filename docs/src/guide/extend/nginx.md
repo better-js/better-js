@@ -14,6 +14,15 @@ which nginx
 
 # 启动
 nginx
+
+# 重新加载配置文件
+nginx -s reload
+
+# 关闭nginx
+nginx -s stop
+
+# 立即关闭nginx
+nginx -s quit
 ```
 
 

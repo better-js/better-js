@@ -7,6 +7,10 @@ import { Nav } from "./type/Nav.mts"
 
 export const nav: Nav = [
 	{ text: "首页", link: "/" },
+	// {
+	// 	text: "计算机基础",
+	// 	items:[]
+	// },
 	{
 		text: "前端",
 		items: [
@@ -16,8 +20,14 @@ export const nav: Nav = [
 			{ text: "TypeScript", link: "/guide/typescript/" },
 		],
 	},
-	{ text: "服务端", items: [{ text: "Node", link: "/guide/node/" }] },
-
+	{
+		text: "服务端",
+		items: [
+			{ text: "Node", link: "/guide/node/" },
+			{ text: "Nginx", link: "/guide/nginx/" },
+			{ text: "MongoDB", link: "/guide/mongodb/" },
+		],
+	},
 	{
 		text: "框架",
 		items: [
@@ -25,24 +35,15 @@ export const nav: Nav = [
 				text: "web端",
 				items: [
 					{
-						text: "vue",
+						text: "Vue",
 						link: "/guide/vue/index",
 					},
-
 					{
-						text: "vuex",
-						link: "/guide/vuex/index",
+						text: "Nuxt",
+						link: "/guide/nuxt/index",
 					},
 					{
-						text: "pinia",
-						link: "/guide/pinia/index",
-					},
-					{
-						text: "vue-router",
-						link: "/guide/vue-router/index",
-					},
-					{
-						text: "react",
+						text: "React",
 						link: "/guide/react/index",
 					},
 				],
@@ -51,7 +52,7 @@ export const nav: Nav = [
 				text: "桌面端",
 				items: [
 					{
-						text: "electron",
+						text: "Electron",
 						link: "/guide/electron/index",
 					},
 				],
@@ -65,25 +66,29 @@ export const nav: Nav = [
 					},
 				],
 			},
+			{
+				text: "服务端",
+				items: [
+					{ text: "Express", link: "/guide/express/" },
+					{ text: "Koa", link: "/guide/koa/" },
+					{ text: "Nest", link: "/guide/nest/" },
+				],
+			},
 		],
 	},
 	{
-		text: "前端工程化",
-		items: [{ text: "git", link: "/guide/git/" }],
+		text: "工程化",
+		items: [
+			{ text: "Git", link: "/guide/git/" },
+			{ text: "ESLint", link: "/guide/eslint/" },
+			{ text: "Prettier", link: "/guide/prettier/" },
+		],
 	},
-	// {
-	// 	text: "性能优化",
-	// 	items: [],
-	// },
-	// {
-	// 	text: "面试宝典",
-	// 	items: [],
-	// },
 	{
 		text: "开发手记",
 		items: [
 			{
-				text: "monorepo",
+				text: "Monorep架构",
 				link: "/guide/notes/monorepo",
 			},
 			{
@@ -91,12 +96,16 @@ export const nav: Nav = [
 				link: "/guide/notes/",
 			},
 			{
-				text: "自定义工具函数库",
+				text: "组件库",
 				link: "/guide/notes/",
 			},
 			{
-				text: "UI组件库",
+				text: "工具库",
 				link: "/guide/notes/",
+			},
+			{
+				text: "小案例",
+				link: "/guide/demo/",
 			},
 		],
 	},
@@ -104,7 +113,7 @@ export const nav: Nav = [
 		text: "源码剖析",
 		items: [
 			{
-				text: "vue3",
+				text: "Vue3",
 				link: "/guide/vue-principle/index",
 			},
 		],

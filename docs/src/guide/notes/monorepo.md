@@ -1,4 +1,4 @@
-# Monorepo
+# Monorepo架构
 
 Monorepo 是一种代码库管理策略，即在一个单一的代码库（repository）中管理多个项目/包（package）。这种方法与传统的每个项目一个代码库（multi-repo）相对。
 

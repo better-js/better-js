@@ -3,7 +3,7 @@
     "vitepress": "^1.0.0-rc.40"
   },
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --open",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
     "pages": "bash scripts/pages.sh",

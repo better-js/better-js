@@ -1054,10 +1054,6 @@ Bootscrap里面container宽度是固定的，但是不同屏幕下，container�
 
 
 
-![image-20220504132726693](/Users/suxingxing/Desktop/苏东旭/images/html/mw-001.png)
-
-
-
 （5）列排序
 
 通过使用 `.col-md-push-*` 和 `.col-md-pull-*` 类就可以很容易的改变列（column）的顺序。
@@ -1082,7 +1078,6 @@ Bootscrap里面container宽度是固定的，但是不同屏幕下，container�
 
 
 
-![image-20220504134018426](/Users/suxingxing/Desktop/苏东旭/images/html/mw-002.png)
 
 
 

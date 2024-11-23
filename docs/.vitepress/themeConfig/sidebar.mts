@@ -14,9 +14,6 @@ import CSS from '../../src/guide/css/sidebar.mjs'
 // vue
 import Vue from "../../src/guide/vue/sidebar.mts"
 import VuePrinciple from "../../src/guide/vue-principle/sidebar.mts"
-import Vuex from "../../src/guide/vuex/sidebar.mjs"
-import Pinia from "../../src/guide/pinia/sidebar.mjs"
-import VueRouter from "../../src/guide/vue-router/sidebar.mts"
 // react
 import React from "../../src/guide/react/sidebar.mts"
 // electron
@@ -26,17 +23,17 @@ import MiniApp from "../../src/guide/mini-app/sidebar.mts"
 // git
 import Git from '../../src/guide/git/sidebar.mts'
 
+import Demo from '../../src/guide/demo/sidebar.mts'
+
 export const sidebar: Sidebar = {
 	"/guide/html/": HTML,
 	"/guide/css/": CSS,
 	// "/guide/javascript/": javaScript,
 	"/guide/vue/": Vue,
 	"/guide/vue-principle/": VuePrinciple,
-	"/guide/pinia/": Pinia,
-	"/guide/vuex/": Vuex,
-	"/guide/vue-router/": VueRouter,
 	"/guide/react/": React,
 	"/guide/electron/": Electron,
 	"/guide/mini-app/": MiniApp,
-	"/guide/git/": Git
+	"/guide/git/": Git,
+	"/guide/demo/": Demo
 }

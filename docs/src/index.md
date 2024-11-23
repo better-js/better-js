@@ -13,8 +13,8 @@ hero:
       text: 快速开始
       link: /hello
     - theme: alt
-      text: 代码案例
-      link: /demo
+      text: 小案例
+      link: /guide/demo/index
 
 features:
   - icon: 

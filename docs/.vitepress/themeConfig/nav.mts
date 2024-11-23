@@ -103,10 +103,6 @@ export const nav: Nav = [
 				text: "工具库",
 				link: "/guide/notes/",
 			},
-			{
-				text: "小案例",
-				link: "/guide/demo/",
-			},
 		],
 	},
 	{

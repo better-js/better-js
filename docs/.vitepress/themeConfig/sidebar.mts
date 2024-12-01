@@ -30,6 +30,9 @@ import Nest from "../../src/guide/nest/sidebar.mts"
 import Git from '../../src/guide/git/sidebar.mts'
 import ESLint from '../../src/guide/eslint/sidebar.mts'
 import Prettier from '../../src/guide/prettier/sidebar.mts'
+// 开发手记
+import MSide from "../../src/guide/notes/m-side/sidebar.mts"
+import KoaServerSide from "../../src/guide/notes/koa-server-side/sidebar.mts"
 
 // 源码剖析
 import VuePrinciple from "../../src/guide/vue-principle/sidebar.mts"
@@ -61,6 +64,8 @@ export const sidebar: Sidebar = {
 	"/guide/eslint/": ESLint,
 	"/guide/prettier/": Prettier,
 	// 开发手记
+	"/guide/notes/m-side/": MSide,
+	"/guide/notes/koa-server-side/": KoaServerSide,
 	// 源码剖析
 	"/guide/vue-principle/": VuePrinciple,
 	// 扩展

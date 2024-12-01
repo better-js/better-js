@@ -14,74 +14,84 @@ export const nav: Nav = [
 	{
 		text: "前端",
 		items: [
-			{ text: "HTML", link: "/guide/html/" },
-			{ text: "CSS", link: "/guide/css/" },
-			{ text: "JavaScript", link: "/guide/javascript/" },
-			{ text: "TypeScript", link: "/guide/typescript/" },
-		],
-	},
-	{
-		text: "服务端",
-		items: [
-			{ text: "Node", link: "/guide/node/" },
-			{ text: "Nginx", link: "/guide/nginx/" },
-			{ text: "MongoDB", link: "/guide/mongodb/" },
-		],
-	},
-	{
-		text: "框架",
-		items: [
 			{
-				text: "web端",
+				text: "语言",
+				items: [
+					{ text: "HTML", link: "/guide/html/" },
+					{ text: "CSS", link: "/guide/css/" },
+					{ text: "JavaScript", link: "/guide/javascript/" },
+					{ text: "TypeScript", link: "/guide/typescript/" },
+				],
+			},
+			{
+				text: "框架与库",
 				items: [
 					{
 						text: "Vue",
 						link: "/guide/vue/index",
+					},
+
+					{
+						text: "React",
+						link: "/guide/react/index",
 					},
 					{
 						text: "Nuxt",
 						link: "/guide/nuxt/index",
 					},
 					{
-						text: "React",
-						link: "/guide/react/index",
-					},
-				],
-			},
-			{
-				text: "桌面端",
-				items: [
-					{
-						text: "Electron",
-						link: "/guide/electron/index",
-					},
-				],
-			},
-			{
-				text: "小程序",
-				items: [
-					{
-						text: "微信小程序",
+						text: "小程序",
 						link: "/guide/mini-app/index",
 					},
 				],
 			},
+		],
+	},
+	{
+		text: "桌面端",
+		items: [
 			{
-				text: "服务端",
+				text: "Electron",
+				link: "/guide/electron/index",
+			},
+		],
+	},
+	{
+		text: "服务端",
+		items: [
+			{
+				text: "运行时与框架",
 				items: [
+					{ text: "Node", link: "/guide/node/" },
 					{ text: "Express", link: "/guide/express/" },
 					{ text: "Koa", link: "/guide/koa/" },
 					{ text: "Nest", link: "/guide/nest/" },
 				],
+			},
+			{
+				text: "数据库",
+				items: [{ text: "MongoDB", link: "/guide/mongodb/" }],
+			},
+			{
+				text: "服务器",
+				items: [{ text: "Nginx", link: "/guide/nginx/" }],
 			},
 		],
 	},
 	{
 		text: "工程化",
 		items: [
-			{ text: "Git", link: "/guide/git/" },
-			{ text: "ESLint", link: "/guide/eslint/" },
-			{ text: "Prettier", link: "/guide/prettier/" },
+			{
+				text: "版本控制",
+				items: [{ text: "Git 分布式版本控制系统", link: "/guide/git/" }],
+			},
+			{
+				text: "工具",
+				items: [
+					{ text: "ESLint 代码检查工具", link: "/guide/eslint/" },
+					{ text: "Prettier 代码格式化工具", link: "/guide/prettier/" },
+				],
+			},
 		],
 	},
 	{
@@ -92,17 +102,25 @@ export const nav: Nav = [
 				link: "/guide/notes/monorepo",
 			},
 			{
-				text: "脚手架",
-				link: "/guide/notes/",
+				text: "Vue3 管理端实战",
+				link: "/guide/notes/m-side/",
 			},
 			{
-				text: "组件库",
-				link: "/guide/notes/",
+				text: "Koa 服务端实战",
+				link: "/guide/notes/koa-server-side/",
 			},
-			{
-				text: "工具库",
-				link: "/guide/notes/",
-			},
+			// {
+			// 	text: "脚手架",
+			// 	link: "/guide/notes/",
+			// },
+			// {
+			// 	text: "组件库",
+			// 	link: "/guide/notes/",
+			// },
+			// {
+			// 	text: "工具库",
+			// 	link: "/guide/notes/",
+			// },
 		],
 	},
 	{

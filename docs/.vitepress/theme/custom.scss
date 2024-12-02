@@ -1,0 +1,18 @@
+footer {
+	.message {
+		color: rgba(17, 25, 37, 0.35) !important;
+		font-weight: 400 !important;
+	}
+}
+
+.copyright {
+	color: rgba(17, 25, 37, 0.35) !important;
+	font-weight: 400 !important;
+	a {
+		text-decoration: none !important;
+		&:hover {
+			color: black !important;
+			text-decoration: underline !important;
+		}
+	}
+}

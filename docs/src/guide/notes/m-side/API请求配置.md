@@ -2,26 +2,32 @@
 
 ## axios二次封装
 
-（1）安装 axios
+**步骤 1：安装 axios**
+
+在你的项目中安装axios，这是一个基于promise的HTTP客户端，用于浏览器和node.js：
 
 ```bash
 pnpm add axios
 ```
 
-（2）在 `utils` 目录下创建 `request.ts`
+-----
+
+**步骤 2：创建axios实例**
+
+在 `utils` 目录下创建 `request.ts` 文件，配置axios实例和拦截器：
 
 ```ts
 import axios from 'axios'
 
 // 创建 axios 实例
 let request = axios.create({
-  baseURL: '',
+  baseURL: import.meta.env.VITE_API_BASE_URL, // 使用环境变量
   timeout: 5000
 })
 
 // 请求拦截器
 request.interceptors.request.use(function (config) {
-  // 在请求发送之前做一些事情
+  // 在请求发送之前做一些事情，例如设置token
   return config;
 }, function (error) {
   // 在请求失败时做一些事情
@@ -48,9 +54,9 @@ export default request
 
 ## API接口统一管理
 
-`api/user/index.ts` 用户相关的接口
+**用户相关接口管理**
 
-`api/user/type/ts` 类型
+在 `api/user`目录下创建 `index.ts` 文件，统一管理用户相关的接口请求：
 
 ```ts
 import request from '@/utils/request'
@@ -63,6 +69,10 @@ enum API {
 // 暴露请求函数
 export function reqLogin = (data: ILoginReq): ILoginRes => request.post(API.LOGIN_URL, data)
 ```
+
+**定义接口请求和响应类型**
+
+在 `api/user` 目录下创建 `type.ts` 文件，用于定义登录接口需要携带的参数类型和返回的参数类型：
 
 ```ts
 // 登录接口需要携带的参数类型

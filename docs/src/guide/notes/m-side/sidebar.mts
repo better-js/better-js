@@ -8,12 +8,12 @@ export default [
                 link: "/guide/notes/m-side/init",
             },
             {
-                text: "eslint配置",
-                link: "/guide/notes/m-side/eslint",
-            },
-            {
                 text: "prettier配置",
                 link: "/guide/notes/m-side/prettier",
+            },
+            {
+                text: "eslint配置",
+                link: "/guide/notes/m-side/eslint",
             },
             {
                 text: "stylelint配置",
@@ -28,8 +28,8 @@ export default [
                 link: "/guide/notes/m-side/commitlint",
             },
             {
-                text: "强制使用pnpm下载包",
-                link: "/guide/notes/m-side/强制使用pnpm下载包",
+                text: "强制使用 pnpm 作为包管理工具",
+                link: "/guide/notes/m-side/强制使用pnpm作为包管理工具",
             },
             {
                 text: "配置文件系统路径别名",
@@ -59,7 +59,7 @@ export default [
             },
             {
                 text: "SVG图标配置",
-                link: "/guide/notes/m-side/SVG图标配置",
+                link: "/guide/notes/m-side/svg图标配置",
             },
             {
                 text: "Sass集成",

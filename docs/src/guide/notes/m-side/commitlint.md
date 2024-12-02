@@ -2,19 +2,19 @@
 
 [Commitlint](https://commitlint.js.org/) 是一个用于检查提交信息（commit message）的工具，确保提交信息符合特定的格式和约定。它常与 Husky 一起使用，以在提交代码之前自动验证提交信息的格式。
 
+-----
 
-
-## 安装
+**步骤 1：安装 Commitlint**
 
 ```bash
 pnpm add --save-dev @commitlint/{cli,config-conventional}
 ```
 
+-----
 
+**步骤 2：配置 Commitlint**
 
-## 配置
-
-`commitlint.config.js` 配置文件
+创建 `commitlint.config.js` 配置文件，定义提交信息的规则：
 
 ```js
 /**
@@ -62,9 +62,9 @@ export default {
 }
 ```
 
+-----
 
-
-## 使用
+**步骤 3：集成 Husky 和使用 Commitlint**
 
 在 `package.json` 中配置 `scripts` 命令：
 
@@ -76,13 +76,13 @@ export default {
 }
 ```
 
-配置 `husky`
+配置 Husky 钩子，以便在提交消息阶段自动运行 Commitlint：
 
 ```bash
 npx husky add .husky/commit-msg
 ```
 
-在生成的 `commit-msg` 文件中添加下面的命令：
+在生成的 `commit-msg` 文件中添加以下脚本：
 
 ```bash
 #!/usr/bin/env sh
@@ -91,4 +91,4 @@ npx husky add .husky/commit-msg
 pnpm commitlint
 ```
 
-当我们 commit 提交信息的时候，就不能再随意写了，必须是 `git commit -m 'feat: xxx'` 符合类型的才可以，需要注意的是类型的后面需要用英文的 `:`，并且 `:` 后面是需要空一格的，这个是不能省略的。
+现在，当你提交代码时，Commitlint 将确保你的提交信息符合预定义的格式。例如，提交信息必须以特定的类型开头，如 `feat:`，并遵循一定的风格指南。

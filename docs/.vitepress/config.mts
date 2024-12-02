@@ -33,7 +33,7 @@ export default defineConfig({
   base: "/",
 
   // 删除 .html 后缀
-  cleanUrls: true,
+  cleanUrls: false,
 
   // 自定义目录 <-> URL 映射
   rewrites: {},

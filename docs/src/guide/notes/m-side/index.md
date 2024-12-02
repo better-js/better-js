@@ -10,8 +10,6 @@
 | stylelint   | css样式检查工具        |
 | prettier    | 代码格式化工具         |
 | husky       | commit拦截             |
-| lint-staged |                        |
-| commitizen  |                        |
 | commitlint  | 统一提交规范           |
 | preinstall  | 统一包管理工具         |
 

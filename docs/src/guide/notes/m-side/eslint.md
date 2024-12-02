@@ -2,88 +2,79 @@
 
 [ESLint](https://eslint.org/) 是一个用于识别和报告 JavaScript 代码中的模式匹配问题的工具，它帮助开发者在开发过程中保持代码的一致性和质量。
 
+-----
 
+**步骤 1：安装 ESLint**
 
-## 安装
+在项目目录下，运行以下命令初始化 ESLint 配置：
 
 ```bash
 pnpm create @eslint/config@latest
 ```
 
+-----
 
+**步骤 2：集成 Prettier**
 
-## 配置
+为了确保代码风格一致性，同时使用 ESLint 和 Prettier 可能会导致一些冲突，因为这两个工具在代码格式化方面有一些重叠的功能。以下是如何集成 Prettier 并解决潜在冲突的步骤：
 
-`eslint.config.js` 配置文件
+**（1）安装 Prettier 集成插件**
+
+安装 `eslint-config-prettier` 和 `eslint-plugin-prettier` 这两个插件，它们可以帮助你解决 ESLint 和 Prettier 之间的冲突。
+
+- `eslint-config-prettier` 禁用所有与格式化相关的ESLint规则，只保留Prettier的格式化。
+- `eslint-plugin-prettier` 将Prettier作为ESLint规则来运行，从而使Prettier的错误显示为ESLint错误。
+
+```bash
+pnpm add --save-dev eslint-plugin-prettier eslint-config-prettier
+```
+
+**（2）配置 ESLint 以集成 Prettier**
+
+在你的 `eslint.config.js` 配置文件中，引入 `eslint-plugin-prettier` 插件。
 
 ```js
-// 导入全局变量定义
-import globals from "globals"
-// 导入 @eslint/js 插件
-import pluginJs from "@eslint/js"
-// 导入 typescript-eslint 插件
-import tseslint from "typescript-eslint"
-// 导入 eslint-plugin-vue 插件
-import pluginVue from "eslint-plugin-vue"
-
-/** @type {import('eslint').Linter.Config[]} */
+// 导入 eslint-plugin-prettier 插件
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 export default [
-	// 匹配所有以.js、.mjs、.cjs、.ts、.vue 结尾的文件
-	{ files: ["**/*.{js,mjs,cjs,ts,vue}"] },
-	// 配置全局变量，这里使用了 globals 库中的 browser 环境变量
-	{ languageOptions: { globals: globals.browser } },
-	// 使用 @eslint/js 插件的 recommended 配置
-	pluginJs.configs.recommended,
-	// 使用 typescript-eslint 插件的 recommended 配置
-	...tseslint.configs.recommended,
-	// 使用 eslint-plugin-vue 插件的 flat/essential 配置
-	...pluginVue.configs["flat/essential"],
-	{
-		// 仅匹配.vue 文件
-		files: ["**/*.vue"],
-		// 配置解析器选项，使用 typescript-eslint 解析器
-		languageOptions: { parserOptions: { parser: tseslint.parser } },
-	},
-	{
-		/**
-		 * "off" or 0 - 关闭规则
-		 * "warn" or 1 - 打开规则作为警告 (不影响代码执行)
-		 * "error" or 2 - 打开规则作为一个错误 (代码不能执行，界面报错)
-		 */
-		rules: {
-			"no-var": "error", // 禁止使用var声明变量
-			"no-unused-vars": "error", // 禁止定义未使用的变量
-			"no-undef": "error", // 禁止使用未定义的变量
-		},
-	},
+  // 其他扩展...
+  eslintPluginPrettierRecommended // // 确保放在最后以覆盖其他配置
 ]
 ```
 
-`.eslintignore` 忽略文件
+----
+
+**步骤 3：创建 ESLint 忽略文件**
+
+在项目根目录下创建 `.eslintignore` 文件，指定 ESLint 忽略的文件和文件夹：
 
 ```
-dist
 node_modules
+dist
 ```
 
+----
 
+**步骤 4：配置 npm 脚本**
 
-## 使用
-
-`package.json` 新增运行脚本
+在 `package.json` 文件中添加 ESLint 脚本命令：
 
 ```json
 {
   "scripts": {
-    "lint:eslint": "eslint src/**/*.{ts,vue} --cache --fix"
+    "lint:eslint": "eslint src/**/*.{ts,vue} --cache --fix" // [!code focus]
   }
 }
 ```
 
-运行脚本
+----
+
+**步骤 5：运行 ESLint 检查命令**
+
+配置完成后，运行以下命令检查代码，ESLint 将会应用 Prettier 的规则，并报告任何与 Prettier 冲突的样式问题。
 
 ```bash
-pnpm run lint:eslint
+pnpm lint:eslint
 ```
 
 

@@ -1,12 +1,22 @@
 # Mock数据
 
-（1）安装
+Mock数据是在本地开发环境中模拟后端API响应的一种常用方法。使用Mock数据可以加速开发流程，无需等待后端API的实现。
+
+-----
+
+**步骤 1：安装 Mock 插件和 Mockjs**
+
+在你的项目中安装 `vite-plugin-mock` 和 `mockjs`：
 
 ```bash
 pnpm i -D vite-plugin-mock mockjs
 ```
 
-（2）在 `vite.config.ts` 配置文件中启用插件
+----
+
+**步骤 2：在 `vite.config.ts` 中配置 Mock 插件**
+
+在 Vite 的配置文件中启用 Mock 插件：
 
 ```ts
 import { viteMockServe } from 'vite-plugin-mock'
@@ -22,9 +32,11 @@ export default defineConfig(({command}) => {
 })
 ```
 
-（3）在项目根目录下创建 `mock` 文件夹，然后创建我们的数据和接口
+----
 
-例如，创建一个 `user.ts` 文件
+**步骤 3：创建 Mock 数据和接口**
+
+在项目根目录下创建一个 `mock` 文件夹，并在其中创建数据和接口文件。例如，创建一个 `user.ts` 文件：
 
 ```ts
 function createUserList() {
@@ -71,7 +83,11 @@ export default [
 ]
 ```
 
-（4）最后通过 axios 测试接口
+-----
+
+**步骤 4：使用 Axios 测试接口**
+
+最后，使用 Axios 来测试你的 Mock 接口：
 
 ```ts
 import axios from 'axios'

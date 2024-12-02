@@ -1,55 +1,57 @@
-# Sass集成
+# Sass集成【】
 
+----
 
+**步骤 1：安装 Sass**
 
+在你的项目中安装Sass
 
-
-## 全局样式
-
-### reset.scss
-
-`npmjs.org` 搜索 `reset-scss` 将 `Code/reset.scss` 样式复制并粘贴到 `assets/styles/reset.scss` 中
-
-
-
-### main.scss
-
-在 `assets/styles` 目录下新建 `main.scss`
-
-```scss
-// 引入清除默认样式
-import './reset.scss'
+```bash
+pnpm add --save-dev sass vite-plugin-sass
 ```
 
-在 `src/main.ts` 入口文件中引入全局样式
+-----
+
+**步骤 2：配置构建工具**
+
+在 `vite.config.ts` 中配置Sass插件：
 
 ```ts
-import '@/assets/main.scss'
-```
+import { defineConfig } from 'vite';
+import scss from 'vite-plugin-sass';
 
-
-
-### variable.scss
-
-在 `assets/styles` 目录下新建 `variable.scss`
-
-```scss
-$color: red
-```
-
-在 `vite.config.ts` 文件中增加如下配置：
-
-```ts
 export default defineConfig({
-  CSS: {
-    preprocessorOptions: {
-      scss: {
-        javascriptEnabled: true,
-        additionalData: `@import "@/assets/styles/variable.scss";`
-      }
-    }
-  }
-})
+  plugins: [
+    scss({
+      // 插件选项
+    }),
+  ],
+});
+```
+
+----
+
+**步骤 3：使用 Sass**
+
+在你的项目中，现在可以使用`.scss`或`.sass`文件了。
+
+```scss
+//variables
+$primary-color: #333;
+
+//mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//使用变量和mixins
+.button {
+  background-color: $primary-color;
+  @include border-radius(5px);
+}
 ```
 
 

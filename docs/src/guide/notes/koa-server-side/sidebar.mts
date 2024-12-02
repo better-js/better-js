@@ -24,4 +24,8 @@ export default [
 		text: "操作数据库",
 		link: "/guide/notes/koa-server-side/操作数据库",
 	},
+	{
+        text: "跨域配置",
+        link: "/guide/notes/koa-server-side/跨域配置",
+    }
 ]

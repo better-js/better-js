@@ -4,34 +4,40 @@
 
 > ESLint 保证 JavaScript 代码质量，Prettier 保证代码美观
 
-## 安装
+-----
+
+**步骤 1：安装 Prettier**
+
+在项目目录下，运行以下命令安装 Prettier 作为开发依赖：
 
 ```bash
 pnpm add --save-dev --save-exact prettier
 ```
 
+-----
 
+**步骤 2：创建 Prettier 配置文件**
 
-## 配置
+在项目根目录创建 `.prettierrc.json` 文件，定义 Prettier 的格式化规则：
 
 `.prettierrc.json` 配置文件
 
-> 注意：json文件中不能有注释，这里的注释只是为了了解每个配置的含义
-
 ```json
 {
-	// 定义配置文件的 JSON 模式，用于验证配置文件的正确性
-	"$schema": "https://json.schemastore.org/prettierrc",
-	// 禁用行尾分号
-	"semi": false,
-	// 使用单引号代替双引号
-	"singleQuote": true,
-	// 设置每行代码的最大字符数为 100
-	"printWidth": 100
+  "useTabs": false,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "semi": false
 }
 ```
 
-`.prettierignore` 忽略文件
+-----
+
+**步骤 3：创建 Prettier 忽略文件**
+
+创建 `.prettierignore` 文件，指定 Prettier 忽略的文件和文件夹：
 
 ```
 # 忽略构建输出目录
@@ -59,49 +65,26 @@ package-lock.json
 yarn.lock
 ```
 
+------
 
+**步骤 4：配置 npm 脚本**
 
-## 使用
-
-`package.json` 新增运行脚本
+在 `package.json` 文件中添加格式化脚本命令：
 
 ```json
 {
   "scripts": {
-    "format": "prettier --write \"./**/*.{html,css,ts,js,json,md}\""
+    "format": "prettier --write \"./**/*.{html,css,ts,js,json,md,vue}\"" // [!code focus]
   },
 }
 ```
 
-运行脚本
+----
+
+**步骤 5：运行格式化命令**
+
+使用以下命令格式化项目中的文件：
 
 ```bash
-pnpm run format
+pnpm format
 ```
-
-
-
-## 集成 ESLint 和 Prettier
-
-（1）安装
-
-`eslint-plugin-prettier` 和 `eslint-config-prettier` 是两个用于集成 ESLint 和 Prettier 的工具。
-
-- `eslint-plugin-prettier`：这个插件将 Prettier 作为 ESLint 的规则来运行。
-- `eslint-config-prettier`：这个配置文件关闭了所有与 Prettier 冲突的 ESLint 规则。
-
-```bash
-pnpm add --save-dev eslint-plugin-prettier eslint-config-prettier
-```
-
-（2）配置 `eslint.config.js`
-
-```json
-// 导入 eslint-plugin-prettier 插件
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
-
-export default [
-  eslintPluginPrettierRecommended
-]
-```
-

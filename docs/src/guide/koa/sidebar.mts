@@ -11,8 +11,4 @@ export default [
         text: "操作数据库",
         link: "/guide/koa/操作数据库",
     },
-    // {
-    //     text: "实战",
-    //     link: "/guide/koa/实战",
-    // }
 ]

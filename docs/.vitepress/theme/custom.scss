@@ -1,18 +1,21 @@
-footer {
-	.message {
-		color: rgba(17, 25, 37, 0.35) !important;
-		font-weight: 400 !important;
-	}
-}
-
 .copyright {
 	color: rgba(17, 25, 37, 0.35) !important;
 	font-weight: 400 !important;
+	display: flex;
+	justify-content: center;
 	a {
 		text-decoration: none !important;
-		&:hover {
+		margin: 0 5px;
+		display: flex;
+		align-items: center;
+		a:hover {
 			color: black !important;
 			text-decoration: underline !important;
+		}
+		img {
+			width: 16px;
+			display: inline-block;
+			margin-right: 5px;
 		}
 	}
 }

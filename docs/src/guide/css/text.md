@@ -2,88 +2,61 @@
 
 ## color 文本颜色
 
-::: tip 语法
-
-属性名：`color`
-
-属性值：
-
-1. 颜色名
-2. `rgb` 或 `rgba`
-3. `HEX` 或 `HEXA`（十六进制）
-4. `HSL` 或 `HSLA`
-
-> 开发中常用的是：`rgb/rgba` 或 `HEX/HEXA`（十六进制）
-
-:::
-
 ```css
 div {
   color: red;
 }
 ```
 
+::: details color属性值
 
+- 支持颜色名、`rgb`/`rgba`、`HEX`/`HEXA`（十六进制）、`HSL`/`HSLA`。
+- 开发中常用的是：`rgb/rgba` 或 `HEX/HEXA`（十六进制）。 
+
+:::
 
 ## letter-spacing 字母间距
 
-- 字母间距（文字间距）：`letter-spacing`
+属性值为像素（px），正值增大间距，负值缩小间距。 
 
-- 属性值为像素（px），正值让间距增大，负值让间距缩小。
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>字母间距</title>
-    <style>
-      div {
-        /* 字母间距 */
-        letter-spacing: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div>Code Better</div>
-  </body>
-</html>
+```css
+div {
+  letter-spacing: 2px; /* 增加字母间距 */
+}
 ```
+
+
 
 ## word-spacing 单词间距
 
-- 单词间距：`word-spacing`（靠识别空格设置间距）
+单词间距通过空格识别，属性值同为像素（px）。
 
-- 字母间距（文字间距）：`letter-spacing`
-
-- 属性值为像素（px），正值让间距增大，负值让间距缩小。
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>单词间距</title>
-    <style>
-      div {
-        /* 单词间距 */
-        word-spacing: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div>Code Better</div>
-  </body>
-</html>
+```css
+div {
+  word-spacing: 2px; /* 增加单词间距 */
+}
 ```
+
+
 
 ## text-decoration 文本修饰
 
-::: tip 语法
+```css
+p {
+  text-decoration: overline green dotted; /* 上划绿色虚线 */
+}
+span {
+  text-decoration: underline red wavy; /* 下划红色波浪线 */
+}
+div {
+  text-decoration: line-through; /* 删除线 */
+}
+a {
+  text-decoration: none; /* 无装饰线 */
+}
+```
 
-属性：`text-decoration`
-
-属性值：
+::: details text-decoration属性值
 
 - `none` ：无装饰线（默认值）
 - `underline` ：下划线 （链接a自带下划线）
@@ -92,84 +65,31 @@ div {
 
 :::
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>文本修饰</title>
-    <style>
-      p {
-        /* 上划绿色虚线 */
-        text-decoration: overline dotted green;
-      }
-      span {
-        /* 下划红色波浪线 */
-        text-decoration: underline wavy red;
-      }
-      div {
-        /* 删除线 */
-        text-decoration: line-through;
-      }
-      a {
-        /* 无装饰线 */
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <p>Code Better</p>
-    <span>Code Better</span>
-    <div>Code Better</div>
-    <a href="">Code Better</a>
-  </body>
-</html>
-```
-
 ## text-indent 文本缩进
 
-::: tip 语法
+```css
+div {
+  text-indent: 20px; /* 文本首行缩进 */
+}
+```
 
-属性：`text-indent`
+::: warning 注意
 
-单位：可以使用 `px` 单位，也可以使用 `em` 单位。
+单位：可以使用 `px` 单位，也可以使用 `em` 单位。正值向右缩进，负值向左缩进，通常与方向有关。
 
 > em 是一个相对单位，就是当前元素（font-size) 1 个文字的大小，如果当前元素没有设置大小，则会按照父元素的 1 个文字大小。
 
 :::
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>文本缩进</title>
-    <style>
-      div {
-        text-indent: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div>Code Better</div>
-    <p>Code Better</p>
-  </body>
-</html>
-```
-
-::: warning 注意
-
-有正负值 正值向右缩进 负值向左缩进 (正负值通常都是和方向有关)
-
-:::
-
 ## text-align 文本对齐
 
-::: tip 语法
+```css
+div {
+  text-align: center; /* 文本居中对齐 */
+}
+```
 
-属性：`text-align`
-
-属性值：
+::: details text-align属性值
 
 - `left` ：靠左（默认值）
 - `right` ：靠右
@@ -178,31 +98,15 @@ div {
 
 :::
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>文本对齐</title>
-    <style>
-      div {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div>Code Better</div>
-  </body>
-</html>
-```
-
 ## line-height 行间距
 
-::: tip 语法
+```css
+div {
+  line-height: 1.5; /* 行间距基于字体大小的倍数 */
+}
+```
 
-属性名：`line-height`
-
-可选值：
+::: details line-height属性值
 
 1. normal ：由浏览器根据文字大小决定的一个默认值。
 2. 像素（px）
@@ -211,39 +115,28 @@ div {
 
 > 由于字体设计原因，文字在一行中，并不是绝对垂直居中，若一行中都是文字，不会太影响观感。
 
-应用场景
-
-- 调整多行文字的间距
-- 单行文字的垂直居中
-
 :::
-
-```css
-div {
-	line-height: 60px;
-}
-```
-
-
 
 ::: warning 注意
 
-- 行高过小，文字会重叠，且最小值是0，不能为负数。
+- 行高过小可能导致文字重叠，最小值为0，不能为负数。
 
-- 行高是可以继承的，且为了能更好的呈现文字，最好写数值。
-- 设置了 `height`，高度就是 `height` 的值，没有设置 `height`，高度就是 `line-height * 行数`。
+- 行高可以继承，推荐使用数值以更好地呈现文字。
+- 设置了`height`的元素，高度就是`height`的值；未设置时，高度为`line-height * 行数`。
 
 :::
 
 ## vertical-align 垂直对齐方式
 
-::: tip 语法
+用于同一行元素之间或表格单元格内文字的垂直对齐。
 
-属性名：`vertical-align`
+```css
+div {
+  vertical-align: middle; /* 垂直居中对齐 */
+}
+```
 
-作用：用于指定<font color=red>同一行元素之间</font>，或<font color=red>表格单元格</font>内文字的<font color=red>垂直对齐方式</font>。
-
-属性值：
+::: details vertical-align属性值
 
 | 属性值   | 说明                                                         |
 | -------- | ------------------------------------------------------------ |
@@ -259,25 +152,12 @@ div {
 
 :::
 
-```css
-div {
-  vertical-align: middle;
-}
-```
+::: warning 解决的问题
 
-
-
-::: warning vertical-align解决的问题
-
-1. 文本框和表单按钮无法对齐
-   - vertical-align或者浮动（浮动元素顶部对齐）
-2. input和img无法对齐
-   - img设置vertical-align
-3. div中的文本框，文本框无法贴顶问题
-4. div不设高度由img标签撑开，此时img标签下面会存在额外间隙问题
-   - img设置vertical-align或者转为块元素	
-5. 使用line-height让img标签垂直居中问题
-   - 父元素设置line-height，子元素img设置vertical-align
+- 文本框和表单按钮对齐问题。
+- `input`和`img`对齐问题。
+- `div`中的文本框贴顶问题。
+- `div`不设高度由`img`标签撑开时的间隙问题。
+- 使用`line-height`让`img`标签垂直居中问题。 
 
 :::
-

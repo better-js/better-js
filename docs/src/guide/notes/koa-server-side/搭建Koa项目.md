@@ -2,12 +2,12 @@
 
 -----
 
-**步骤 1：安装 koa 和 koa-router**
+**步骤 1：安装 koa**
 
 首先，我们需要安装 koa 框架和 koa-router 库，以便创建路由。请在项目根目录下运行以下命令：
 
 ```bash
-pnpm i koa koa-router
+pnpm install koa
 ```
 
 ------
@@ -23,19 +23,15 @@ pnpm i koa koa-router
 
 ```js
 const Koa = require("koa")
-const Router = require("koa-router")
 
 const app = new Koa()
-const router = new Router()
 
-router.get("/", (ctx) => {
+app.use(async (ctx) => {
 	ctx.body = "Hello, Koa!"
 })
 
-app.use(router.routes()).use(router.allowedMethods())
-
 app.listen(3000, () => {
-	console.log("Server is running at http://localhost:3000")
+	console.log("Server running on http://localhost:3000")
 })
 ```
 

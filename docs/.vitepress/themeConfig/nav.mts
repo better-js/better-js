@@ -83,22 +83,39 @@ export const nav: Nav = [
 		items: [
 			{
 				text: "版本控制",
-				items: [{ text: "Git 分布式版本控制系统", link: "/guide/git/" }],
+				items: [{ text: "Git", link: "/guide/git/" }],
 			},
 			{
-				text: "工具",
+				text: "构建工具",
 				items: [
-					{ text: "ESLint 代码检查工具", link: "/guide/eslint/" },
-					{ text: "Prettier 代码格式化工具", link: "/guide/prettier/" },
+					{ text: "WebPack", link: "/guide/webpack/" },
+					{ text: "Vite", link: "/guide/vite/" },
+					{ text: "Rollup", link: "/guide/rollup/" },
+					{ text: "EsBuild", link: "/guide/esbuild/" },
 				],
 			},
+			{
+				text: "代码规范",
+				items: [
+					{ text: "ESLint", link: "/guide/eslint/" },
+					{ text: "Prettier", link: "/guide/prettier/" },
+				],
+			},
+			{
+				text: "提交规范",
+				items: [
+					{ text: "Commitlint", link: "/guide/commitlint/" },
+					{ text: "Commitizen", link: "/guide/commitizen/" },
+				],
+			},
+			{ text: "Git Hook", items: [{ text: "husky", link: "/guide/husky/" }] },
 		],
 	},
 	{
 		text: "开发手记",
 		items: [
 			{
-				text: "Monorep架构",
+				text: "Monorepo架构",
 				link: "/guide/notes/monorepo",
 			},
 			{

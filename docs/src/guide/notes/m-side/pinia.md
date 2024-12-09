@@ -1,4 +1,4 @@
-# 状态管理
+# pinia安装
 
 ----
 
@@ -19,11 +19,11 @@ pnpm add pinia
 ```ts
 import { createApp } from 'vue';
 import App from './App.vue';
-import { createPinia } from 'pinia';
+import { createPinia } from 'pinia'; // [!code focus]
 
 const app = createApp(App);
 
-app.use(createPinia());
+app.use(createPinia()); // [!code focus]
 app.mount('#app');
 ```
 

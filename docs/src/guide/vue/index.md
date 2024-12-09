@@ -1,12 +1,8 @@
 # Vue3简介
 
-2020年9月18日，Vue.js 发布 `3.0` 版本，代号：`One Piece`（海贼王）
+2020年9月18日，Vue.js 发布[3.0](https://github.com/vuejs/core/releases/tag/v3.0.0)版本，代号：`One Piece`（海贼王）
 
-https://github.com/vuejs/core/releases/tag/v3.0.0
-
-
-
-## Vue3的变化
+:::details Vue3的变化
 
 - 同一元素上使用的`v-if`和`v-for`优先级已更改，但**不推荐**同时使用 `v-if` 和 `v-for`。
 
@@ -38,6 +34,8 @@ https://github.com/vuejs/core/releases/tag/v3.0.0
 - Vue3 不兼容 `IE11`
 - `$on`，`$off` 和 `$once` 实例方法已被移除，组件实例不再实现事件触发接口。
 
+:::
+
 ## OptionsAPI 与 CompositionAPI
 
 - `Vue2`的`API`设计是`Options`（配置）风格的。
@@ -45,6 +43,7 @@ https://github.com/vuejs/core/releases/tag/v3.0.0
 ###  Options API 的弊端
 
 `Options`类型的 `API`，数据、方法、计算属性等，是分散在：`data`、`methods`、`computed`中的，若想新增或者修改一个需求，就需要分别修改：`data`、`methods`、`computed`，不便于维护和复用。
+
 <div style="display:flex">
 <img src="/images/vue3/1.gif" alt="1.gif" style="zoom:60%;border-radius:20px;margin-right:10px" /><img src="/images/vue3/2.gif" alt="2.gif" style="zoom:60%;border-radius:20px" />
 </div>

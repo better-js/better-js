@@ -1,6 +1,8 @@
-# 创建项目
+# 创建Vue3工程
 
 ## 完整版
+
+创建一个完整的Vue3工程，包含TypeScript、ESLint和Prettier。
 
 ::: code-group
 
@@ -9,13 +11,13 @@ npm create vue@latest
 ```
 
 ```sh [2.具体配置]
-# 配置项目名称
+# 请输入项目名称
 ✔ Project name: … hello_vue3
 
-# 是否使用TypeScript语法？
+# 是否使用 TypeScript 语法？
 ✔ Add TypeScript? … Yes
 
-# 是否启用JSX支持？
+# 是否启用 JSX 支持？
 ✔ Add JSX Support? … No
 
 # 是否引入 Vue Router 进行单页面应用开发？
@@ -27,7 +29,7 @@ npm create vue@latest
 # 是否引入 Vitest 用于单元测试？
 ✔ Add Vitest for Unit Testing? … No
 
-# 是否要引入一款端到端（End to End）测试工具？
+# 是否要引入一款端到端（End to End）测试工？
 ✔ Add an End-to-End Testing Solution? › No
 
 # 是否引入 ESLint 用于代码质量检测？
@@ -37,18 +39,11 @@ npm create vue@latest
 ✔ Add Prettier for code formatting? … Yes
 ```
 
-```sh [3.项目构建完成]
-cd hello_vue3
-npm install
-npm run format
-npm run dev
-```
-
 :::
 
 ## 简洁版
 
-无router、无pinia
+创建一个简洁的Vue3工程，仅包含TypeScript。
 
 :::code-group
 

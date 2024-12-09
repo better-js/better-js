@@ -41,8 +41,7 @@ pnpm add -D lint-staged
 ```json
 {
   "lint-staged": {
-    "*.js": "eslint --fix",
-    "*.vue": "eslint --fix"
+    "*.{ts,vue}": "eslint --fix"
   }
 }
 ```

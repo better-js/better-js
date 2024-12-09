@@ -34,7 +34,7 @@ export const socialLinks: SocialLink[] = [
 // footer
 export const footer = {
 	message: "",
-	copyright: "©2024 codebetter.cn 版权所有 <a href=\"https://beian.miit.gov.cn/\" target=\"_blank\">京ICP备2024098078号</a>",
+	copyright: "©2024 Dancy Su",
 }
 
 // editLink

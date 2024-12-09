@@ -4,6 +4,10 @@ export default [
 		collapsed: true,
 		items: [
 			{
+				text: "创建vue3工程",
+				link: "/guide/vue/core/create-vue",
+			},
+			{
 				text: "setup",
 				link: "/guide/vue/core/setup",
 			},
@@ -16,23 +20,23 @@ export default [
 				link: "/guide/vue/core/ref",
 			},
 			{
-				text: "computed()",
-				link: "/guide/vue/core/computed",
-			},
-			{
 				text: "reactive()",
 				link: "/guide/vue/core/reactive",
 			},
 			{
-				text: "watchEffect()",
-				link: "/guide/vue/core/watchEffect",
+				text: "computed()",
+				link: "/guide/vue/core/computed",
 			},
 			{
 				text: "watch()",
 				link: "/guide/vue/core/watch",
 			},
 			{
-				text: "provide&inject",
+				text: "watchEffect()",
+				link: "/guide/vue/core/watchEffect",
+			},
+			{
+				text: "provide与inject",
 				link: "/guide/vue/core/provide&inject",
 			},
 			{
@@ -67,10 +71,7 @@ export default [
 				text: "mitt",
 				link: "/guide/vue/core/mitt",
 			},
-			{
-				text: "创建vue3项目",
-				link: "/guide/vue/core/create-vue3-project",
-			},
+			
 			{
 				text: "项目结构介绍",
 				link: "/guide/vue/core/project-diagram",

@@ -11,7 +11,6 @@
 | prettier    | 代码格式化工具         |
 | husky       | commit拦截             |
 | commitlint  | 统一提交规范           |
-| preinstall  | 统一包管理工具         |
 
 
 

@@ -5,10 +5,6 @@ export default [
 		link: "/guide/css/选择器",
 	},
 	{
-		text: "三大特性",
-		link: "/guide/css/三大特性",
-	},
-	{
 		text: "字体属性",
 		link: "/guide/css/font",
 	},
@@ -16,6 +12,11 @@ export default [
 		text: "文本属性",
 		link: "/guide/css/text",
 	},
+	{
+		text: "三大特性",
+		link: "/guide/css/三大特性",
+	},
+	
 	{ text: "颜色", link: "/guide/css/颜色" },
 	{ text: "列表属性", link: "/guide/css/列表属性" },
 	{ text: "边框属性", link: "/guide/css/边框属性" },
@@ -31,7 +32,7 @@ export default [
 	{ text: "CSS常用架构", link: "/guide/css/css常用架构" },
 	{
 		text: "CSS常见布局",
-    link: "/guide/css/css常见布局",
+		link: "/guide/css/css常见布局",
 	},
 	{ text: "seo", link: "/guide/css/seo" },
 	{ text: "精灵图", link: "/guide/css/精灵图" },

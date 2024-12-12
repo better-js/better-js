@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as t}from"./chunks/framework.__fMkWnK.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/html/canvas.md","filePath":"guide/html/canvas.md","lastUpdated":null}'),s={name:"guide/html/canvas.md"};function n(c,r,o,d,i,l){return t(),e("div")}const _=a(s,[["render",n]]);export{p as __pageData,_ as default};

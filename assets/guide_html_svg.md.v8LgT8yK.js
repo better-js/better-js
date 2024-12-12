@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.__fMkWnK.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/html/svg.md","filePath":"guide/html/svg.md","lastUpdated":1733754322000}'),s={name:"guide/html/svg.md"};function r(o,c,d,n,i,m){return a(),t("div")}const _=e(s,[["render",r]]);export{l as __pageData,_ as default};
